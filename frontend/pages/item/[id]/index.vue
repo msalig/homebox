@@ -191,14 +191,6 @@
         copyable: true,
       },
       {
-        name: "items.insured",
-        text: item.value?.insured ? "Yes" : "No",
-      },
-      {
-        name: "items.archived",
-        text: item.value?.archived ? "Yes" : "No",
-      },
-      {
         name: "items.notes",
         type: "markdown",
         text: item.value?.notes,
@@ -682,13 +674,6 @@
                   :item-id="item.id"
                 />
               </template>
-              <template #warranty>
-                <ItemAttachmentsList
-                  v-if="attachments.warranty.length > 0"
-                  :attachments="attachments.warranty"
-                  :item-id="item.id"
-                />
-              </template>
               <template #receipts>
                 <ItemAttachmentsList
                   v-if="attachments.receipts.length > 0"
@@ -700,21 +685,6 @@
             <div v-else>
               <p class="px-6 pb-4 text-foreground/70">No attachments found</p>
             </div>
-          </BaseCard>
-
-          <BaseCard v-if="showPurchase" collapsable>
-            <template #title> {{ $t("items.purchase_details") }} </template>
-            <DetailsSection :details="purchaseDetails" />
-          </BaseCard>
-
-          <BaseCard v-if="showWarranty" collapsable>
-            <template #title> {{ $t("items.warranty_details") }} </template>
-            <DetailsSection :details="warrantyDetails" />
-          </BaseCard>
-
-          <BaseCard v-if="showSold" collapsable>
-            <template #title> {{ $t("items.sold_details") }} </template>
-            <DetailsSection :details="soldDetails" />
           </BaseCard>
         </template>
       </div>

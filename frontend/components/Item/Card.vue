@@ -16,21 +16,10 @@
         <Separator class="mb-1" />
         <TooltipProvider :delay-duration="0">
           <div class="flex items-center gap-2">
-            <Tooltip v-if="item.insured">
-              <TooltipTrigger>
-                <MdiShieldCheck class="size-5 text-primary" />
-              </TooltipTrigger>
-              <TooltipContent>
-                {{ $t("global.insured") }}
-              </TooltipContent>
-            </Tooltip>
             <Tooltip v-if="item.archived">
               <TooltipTrigger>
                 <MdiArchive class="size-5 text-destructive" />
               </TooltipTrigger>
-              <TooltipContent>
-                {{ $t("global.archived") }}
-              </TooltipContent>
             </Tooltip>
             <div class="grow"></div>
             <Tooltip>

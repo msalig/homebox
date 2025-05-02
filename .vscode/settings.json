@@ -34,4 +34,6 @@
   "[go]": {
     "editor.defaultFormatter": "golang.go"
   },
+  "workbench.tree.indent": 40,
+  "workbench.tree.renderIndentGuides": "always",
 }

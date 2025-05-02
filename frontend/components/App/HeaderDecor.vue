@@ -1,5 +1,5 @@
 <template>
-  <svg viewBox="0 0 1440 237" role="img" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- <svg viewBox="0 0 1440 237" role="img" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
     <g clip-path="url(#clip0_5_1510)" filter="url(#filter0_d_5_1510)">
       <rect width="1440" height="310" transform="translate(0 -103)" fill="white" />
       <rect y="-103" width="1440" height="310" class="fill-secondary" />
@@ -449,5 +449,5 @@
         <rect width="75.8085" height="75.8085" fill="white" transform="translate(292.808 44.8085) rotate(180)" />
       </clipPath>
     </defs>
-  </svg>
+  </svg> -->
 </template>

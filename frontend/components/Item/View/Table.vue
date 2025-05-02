@@ -92,9 +92,6 @@
                 {{ d.name }}
               </NuxtLink>
             </template>
-            <template v-else-if="h.type === 'price'">
-              <Currency :amount="d.purchasePrice" />
-            </template>
             <template v-else-if="h.type === 'boolean'">
               <MdiCheck v-if="d.insured" class="inline size-5 text-green-500" />
               <MdiClose v-else class="inline size-5 text-destructive" />
@@ -192,10 +189,7 @@
       type: "name",
     },
     { text: "items.quantity", value: "quantity", align: "center", enabled: true },
-    { text: "items.insured", value: "insured", align: "center", enabled: true, type: "boolean" },
-    { text: "items.purchase_price", value: "purchasePrice", align: "center", enabled: true, type: "price" },
     { text: "items.location", value: "location", align: "center", enabled: false, type: "location" },
-    { text: "items.archived", value: "archived", align: "center", enabled: false, type: "boolean" },
     { text: "items.created_at", value: "createdAt", align: "center", enabled: false, type: "date" },
     { text: "items.updated_at", value: "updatedAt", align: "center", enabled: false, type: "date" },
   ] satisfies TableHeaderType[];

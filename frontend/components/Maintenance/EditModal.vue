@@ -12,7 +12,6 @@
         <DatePicker v-model="entry.completedDate" :label="$t('maintenance.modal.completed_date')" />
         <DatePicker v-model="entry.scheduledDate" :label="$t('maintenance.modal.scheduled_date')" />
         <FormTextArea v-model="entry.description" :label="$t('maintenance.modal.notes')" />
-        <FormTextField v-model="entry.cost" autofocus :label="$t('maintenance.modal.cost')" />
 
         <DialogFooter>
           <Button type="submit">

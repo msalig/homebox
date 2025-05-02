@@ -48,10 +48,10 @@
 
   // Currency Selection
   const currency = ref<CurrenciesCurrency>({
-    code: "USD",
-    name: "United States Dollar",
-    local: "en-US",
-    symbol: "$",
+    code: "EUR",
+    name: "Euro",
+    local: "de-DE",
+    symbol: "€",
   });
   watch(currency, () => {
     if (group.value) {
@@ -60,7 +60,7 @@
   });
 
   const currencyExample = computed(() => {
-    return fmtCurrency(1000, currency.value?.code ?? "USD", getLocaleCode());
+    return fmtCurrency(1000, currency.value?.code ?? "EUR", getLocaleCode());
   });
 
   const { data: group } = useAsyncData(async () => {

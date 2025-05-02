@@ -60,19 +60,7 @@
         title: t("maintenance.total_entries"),
         value: count,
         type: "number" as StatsFormat,
-      },
-      {
-        id: "total",
-        title: t("maintenance.total_cost"),
-        value: total,
-        type: "currency" as StatsFormat,
-      },
-      {
-        id: "average",
-        title: t("maintenance.monthly_average"),
-        value: average,
-        type: "currency" as StatsFormat,
-      },
+      }
     ];
   });
 </script>
@@ -148,16 +136,6 @@
                 <MdiCalendar class="mr-2" />
                 <DateTime :date="e.scheduledDate" format="human" datetime-type="date" />
               </Badge>
-              <TooltipProvider :delay-duration="0">
-                <Tooltip>
-                  <TooltipTrigger>
-                    <Badge>
-                      <Currency :amount="e.cost" />
-                    </Badge>
-                  </TooltipTrigger>
-                  <TooltipContent> Cost </TooltipContent>
-                </Tooltip>
-              </TooltipProvider>
             </div>
           </template>
         </BaseSectionHeader>
